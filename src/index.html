@@ -1,14 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Cartão de crédito válido</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cartão de crédito válido</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <!-- <header>VILAREJO MUSICAL</header> -->
+  <div class="container-one hide">
+    <!-- <img class="pag-one" src="Img/music_pag1.jpeg" alt=""> -->
+    <div class="informs-container-one">
+      <span class="title-one">
+        <h1>Vilarejo Musical</h1>
+        <h3>MENU</h3>
+      </span>
+      <div class="button-menu-container">
+        <button class="btn1 button" type="button" onclick="alert">Quem somos</button>
+        <button class="btn2 button" type="button" onclick="confirm">Instrumentos musicais</button>
+        <button class="btn3 button" type="button" onclick="confirm">Brinquedos sonoros</button>
+        <button class="btn4 button" type="button" onclick="confirm">Livros musicais</button>
+        <button class="btn5 button" type="button" onclick="confirm">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-two hide">
+    <div class="container-two">
+      <!-- <img class="pag-two" src="Img/music_pag2.jpeg" alt="" hide> -->
+      <div class="informs-container-two">
+        <span class="title-two">
+          <h2>Vilarejo Musical</h2>
+        </span>
+        <div class="text-box">
+          <p>A música é a linguagem que se traduz em formas sonoras capazes de comunicar pensamentos, sensações e sentimentos através do som e silêncio.</p>
+          <p>Tendo em vista a importância que a música representa para a sociedade. A vilarejo musical, como uma empresa que se preocupa com uma educação musical de qualidade, busca por meio dos nossos produtos proporcionar uma experiência musical de nível profissional para a formação dos nossos pequenos.</p>
+        </div>
+        <div>
+          <button class="return-menu button">Voltar ao menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-three hide">
+    <!-- <img class="pag-three" src="Img/music_pag3.jpeg" alt="" hide> -->
+    <div class="inform-card">
+      <span>
+        <h2>Validação do cartão de crédito</h2>
+      </span>
+    </div>
+    <div class="id-card">
+      <form class="cred-card-one">
+        <div class="number-card">
+          <label class="style-number-one" for="number">Número do cartão</label>
+          <input class="style-number-two" type="number" id="number" maxlength="16" placeholder="4154 2560 8541 9631">
+        </div>
+        <div class="user-name">
+          <label class="style-name-one" for="name">Títular do cartão </label>
+          <input class="style-name-two" type="name" id="name" placeholder="Maria da Silva">
+        </div>
+      </form>
+
+      <form class="cred-card-two">
+        <div class="expiration-date">
+          <label class="style-expiration-one" for="expiration">Validade</label>
+          <input class="style-expiration-two" type="month" id="expiration" placeholder="06/25" value="">
+        </div>
+        <div class="security-code">
+          <label class="style-code-one" for="code-card">CVV</label>
+          <input class="style-code-two" type="code-card" id="code-card" placeholder="123">
+        </div>
+      </form>
+      <div>
+        <button class="validation button">Validar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-for">
+    <!-- <img class="pag-for" src="Img/music_pag4.jpg" alt="" hide> -->
+    <div class="inform-container-for">
+      <div class="card-validation">
+        <button class="return-menu-two button">Voltar ao menu</button>
+        <button class="confirm button">Confirmar compra</button>
+      </div>
+    </div>
+  </div>
+  <script src="index.js" type="module"></script>
+  <footer></footer>
+</body>
+
 </html>
