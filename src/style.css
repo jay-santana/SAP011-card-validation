@@ -154,12 +154,13 @@ button {
     background-image: linear-gradient(to right,#b7e4fd, #ffb9fa);
     color: #5271ff;
     border: #a7b7ff;
+
     font-family: 'shine';
     font-size: 28px;
 
     width: 50%;
     height: 200px;
-    
+   
     border: 0;
     border-radius: 20px;
     text-align: justify;
