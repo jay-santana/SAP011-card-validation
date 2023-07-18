@@ -10,18 +10,18 @@
 <body>
   <!-- <header>VILAREJO MUSICAL</header> -->
   <!-- <main></main> -->
-  <div class="container-one hide">
+  <div class="container-one">
     <div class="informs-container-one">
       <span class="title-one">
         <h1>Vilarejo Musical</h1>
         <h3>MENU</h3>
       </span>
       <div class="button-menu-container">
-        <button class="btn1 button" type="button" onclick="confirm">Quem somos</button>
-        <button class="btn2 button" type="button" onclick="confirm">Instrumentos musicais</button>
-        <button class="btn3 button" type="button" onclick="confirm">Brinquedos sonoros</button>
-        <button class="btn4 button" type="button" onclick="confirm">Livros musicais</button>
-        <button class="btn5 button" type="button" onclick="confirm">Comprar</button>
+        <button class="btn1 button" type="button">Quem somos</button>
+        <button class="btn2 button" type="button">Instrumentos musicais</button>
+        <button class="btn3 button" type="button">Brinquedos sonoros</button>
+        <button class="btn4 button" type="button">Livros musicais</button>
+        <button class="btn5 button" type="button">Comprar</button>
       </div>
     </div>
   </div>
@@ -39,23 +39,20 @@
           experiência musical de nível profissional para a formação dos nossos pequenos.</p>
       </div>
       <div>
-        <button class="return-menu button">Voltar ao menu</button>
+        <button class="return-menu button" type="button">Voltar ao menu</button>
       </div>
     </div>
   </div>
   </div>
 
 
-  <div class="container-three">
+  <div class="container-three hide">
     <div class="inform-container-three">
       <span>
         <h2>Validação do cartão de crédito</h2>
       </span>
     </div>
     <div class="container-card">
-      <!-- <div class="formt-card">
-        <label class="style-card-one" for="card">Cartão</label>
-      </div> -->
       <div class="id-card">
         <form class="cred-card-one">
           <div class="number-card">
@@ -79,7 +76,7 @@
           </div>
         </form>
         <div>
-          <button class="validation button">Validar</button>
+          <button class="validation button" type="button">Validar</button>
         </div>
       </div>
       <div class="formt-card">
@@ -92,12 +89,13 @@
   <div class="container-for hide">
     <div class="inform-container-for">
       <div class="card-validation">
-        <button class="return-menu-two button">Voltar ao menu</button>
-        <button class="confirm button">Confirmar compra</button>
+        <button class="return-menu-two button" type="button">Voltar ao menu</button>
+        <button class="confirm button" type="button">Confirmar compra</button>
       </div>
     </div>
   </div>
-  <script src="index.js" type="module"></script>
+  <script src="index.js" type="module" async></script>
+  <script src="validator.js"></script>
   <footer></footer>
 </body>
 
