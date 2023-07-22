@@ -1,31 +1,39 @@
 const validator = {
-  // ...
+  //Algoritmo de Luhn
+  isValidCredCard: function (number) { //Passo 1: contar os números do array;
+    // const numberDigitsOne = number.length;
+    const numberDigits = number.split('').reverse().map(Number) //Passo 4: transformar a string em número;
+    let sum = 0
+
+    // console.log(numberDigits);
+
+    //Passo 5: multiplicar os números pares por 2.
+    for (let i = 1; i < numberDigits.length; i = i + 2) {
+      numberDigits[i] = numberDigits[i] * 2
+      //Passo 6: somar o produto dos números do resultado da multiplicação;
+      if (numberDigits[i] > 9) {
+        numberDigits[i] = numberDigits[i] - 9
+      } else {
+        numberDigits
+      }
+    }
+
+    //Passo 7: somar todos os números do array;
+    for (let i = 0; i < numberDigits.length; i++) {
+      sum = sum + numberDigits[i]
+    }
+    //Passo 8: verificar se a soma dos dígitos é multiplo de 10;
+    //Passo 9: exibir mensagem de validação.
+    if (sum % 10 === 0) {
+      alert('Obaa! cartão de crédito válido');
+    } else {
+      alert('Cartão de crédito inválido :(');
+    }
+  }
 };
 
-export default validator;
-
-
-//Alerta sobre não poder inserir um campos vazios as informações do usuário 
-
+// maskify
 
 //Ocultar todos os dígitos do número do cartão, excetuando os últimos 4 caractere
 
-//Algoritmo de Luhn
-//Inserir o número que desejamos validar, esse número deve conter 16 dígitos (contendo apenas caracteres numéricos, dígitos de [0-9]); 
-
-//Multiplicar por dois, todos os números que ocupam uma posição par;
-
-//Adicionar os dígitos do resultado para os números maiores ou iguais a 10 (16 => 1 + 6 = 7);
-
-//Verificar a validação do número, o número a verificar será válido se a soma de seus dígitos finais for um múltiplo de 10.
-
-//Exibir mensagem sobre a validação ou invalidação do cartão
-
-const buttonOnePag1 = document.querySelector('.button-menu-container')
-
-
-buttonOnePag1.addEventListener('click', informStore)
-
-function informStore() {
-  buttonOnePag1.classList.add('hide')
-}
+export default validator;

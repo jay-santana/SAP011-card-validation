@@ -52,6 +52,13 @@ button {
     cursor: pointer;
 }
 
+input {
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .container-one {
     width: 100%;
     height: 100vh;
@@ -158,8 +165,8 @@ button {
     font-family: 'shine';
     font-size: 28px;
 
-    width: 50%;
-    height: 200px;
+    width: 12em;
+    height: 7em;
    
     border: 0;
     border-radius: 20px;
@@ -213,7 +220,7 @@ button {
 .style-number-two::placeholder {
     color: #c9c7c7;
     text-align: center;
-    font-size: 12px;  
+    font-size: 16px;      
 }
 
 .style-name-one {
@@ -231,7 +238,7 @@ button {
 .style-name-two::placeholder {
     color: #c9c7c7;
     text-align: center;
-    font-size: 12px; 
+    font-size: 16px;
 }
 
 .style-expiration-one {
@@ -249,7 +256,7 @@ button {
 .style-expiration-two::placeholder {
     color: #c9c7c7;
     text-align: center;
-    font-size: 12px; 
+    font-size: 16px; 
 }
 
 .style-code-one {
@@ -267,7 +274,7 @@ button {
 .style-code-two::placeholder {
     color: #c9c7c7;
     text-align: center;
-    font-size: 12px; 
+    font-size: 16px; 
 }
 
 .container-for {
@@ -351,7 +358,7 @@ button {
     border: #ff9dd9;
 }
 
-.return-menu {
+.return-menu-one {
     background-color:#a7b7ff;
     color: #fff;
     font-size: 20px;
@@ -362,7 +369,7 @@ button {
 .validation {
     background-image: linear-gradient(to right,#b7e4fd, #ffb9fa);
     color: #5271ff;
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 2%;
     border: #a7b7ff;
 
