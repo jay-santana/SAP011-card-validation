@@ -1,6 +1,6 @@
 const validator = {
   //Algoritmo de Luhn
-  isValidCredCard: function (number) { //Passo 1: contar os números do array;
+  isValidCredCard: function(number) { //Passo 1: contar os números do array;
     // const numberDigitsOne = number.length;
     const numberDigits = number.split('').reverse().map(Number) //Passo 4: transformar a string em número;
     let sum = 0
@@ -25,15 +25,17 @@ const validator = {
     //Passo 8: verificar se a soma dos dígitos é multiplo de 10;
     //Passo 9: exibir mensagem de validação.
     if (sum % 10 === 0) {
-      alert('Obaa! cartão de crédito válido');
+      alert('Obaa!! cartão de crédito válido')
     } else {
-      alert('Cartão de crédito inválido :(');
+      alert('Cartão de crédito inválido :(')
     }
+  },
+
+  //Ocultar todos os dígitos do número do cartão, excetuando os últimos 4 caractere
+  maskifyCredCard: function(number){
+    // const maskifyNumberDigit
+
   }
-};
-
-// maskify
-
-//Ocultar todos os dígitos do número do cartão, excetuando os últimos 4 caractere
+}
 
 export default validator;

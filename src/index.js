@@ -17,15 +17,12 @@ const idExpiration = document.getElementById('input-expiration')
 const idCodeCard = document.getElementById('input-code-card')
 
 
-
-
 //Funcionalidade dos botões das páginas
 buttonOnePag1.addEventListener('click', informStore)
 buttonReturnMenuOne.addEventListener('click', returnMenuOne)
 buttonFivePag1.addEventListener('click', idCard)
 buttonValidation.addEventListener('click', msgValidation)
 buttonValidation.addEventListener('click', emptyAlert)
-// buttonValidation.addEventListener('click', validator)
 buttonReturnMenuTwo.addEventListener('click', returnMenuTwo)
 
 //Ir para pág. 2
@@ -59,6 +56,8 @@ function msgValidation(e) {
   validator.isValidCredCard(number)
 }
 
+
+
 //Mensagem de alerta: número de cartão vazios;
 function emptyAlert(e){
   const idNumberCard = document.getElementById('input-numbers').value
@@ -69,8 +68,16 @@ function emptyAlert(e){
 
   }
   // console.log(idNumberCard);
-
 }
+//Mensagem de validação na pág. 4
+// function textResult(){
+//   let total = 0;
+//   if (total == 0){
+//     document.querySelector('.result-text').innerHTML = 'Obaa!! cartão de credito válido!'
+//   } else {
+//     document.querySelector('.result-text').innerHTML = 'Cartão de credito inválido! :('
+// }
+// }
 
 //Retornar ao menu a partir da pág. 4 e limpar campos
 function returnMenuTwo() {
@@ -83,11 +90,17 @@ function returnMenuTwo() {
   idCodeCard.value = '';
 }
 
-
-// validator.isValidCredCard(number)
+//Espelhamento dos dados do input para o cartão de crédito virtual
+document.getElementById('input-numbers'). oninput = () => {
+  document.querySelector('.style-number-card').innerText = document.getElementById('input-numbers').value
+}
+document.getElementById('input-name'). oninput = () => {
+  document.querySelector('.name-card').innerText = document.getElementById('input-name').value
+}
+document.getElementById('input-expiration'). oninput = () => {
+  document.querySelector('.exp-date').innerText = document.getElementById('input-expiration').value
+}
+document.getElementById('input-code-card'). oninput = () => {
+  document.querySelector('.code').innerText = document.getElementById('input-code-card').value
+}
 console.log(validator);
-
-// function validator(){
-// const isValid = isValidCreditCard('numbers')
- 
-// }

@@ -104,7 +104,7 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 52%;
+    margin-right: 55%;
     margin-left: 2%;
     gap: 16px;
 }
@@ -147,6 +147,7 @@ input {
 .inform-container-three {
     width: 90%;
     margin-right: 15%;
+    /* margin-bottom: 10px; */
 }
 
 .container-card {
@@ -157,33 +158,9 @@ input {
     gap: 16px;
 }
 
-.formt-card {
-    background-image: linear-gradient(to right,#b7e4fd, #ffb9fa);
-    color: #5271ff;
-    border: #a7b7ff;
-
-    font-family: 'shine';
-    font-size: 28px;
-
-    width: 12em;
-    height: 7em;
-   
-    border: 0;
-    border-radius: 20px;
-    text-align: justify;
-    /* padding: 30px; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-}  
-
-.id-card {
+.id-card-one {
     margin-left: 250px;
-    margin-top: 50px;
-
+    margin-top: 60px;
  }
 
 .cred-card-one {
@@ -276,6 +253,56 @@ input {
     text-align: center;
     font-size: 16px; 
 }
+
+.formt-card {
+    background-image: linear-gradient(to right,#b7e4fd, #ffb9fa);
+    border: #a7b7ff;
+
+    width: 310px;
+    height: 200px;
+    margin-top: 80px;
+   
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 1)
+}
+
+.id-card-two{
+    width: 100%;
+    color: #fcfcfc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    
+}
+
+.style-number-card{
+    font-size: 22px;
+    display: flex;
+    margin-right: 30px;
+}
+
+.flexbox-card{
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.name-card{
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    margin-right: 138px;
+}
+
 
 .container-for {
     background-image: url(img/music_pag4.jpg);
