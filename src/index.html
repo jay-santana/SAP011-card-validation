@@ -58,28 +58,28 @@
     </div>
     <div class="container-card">
       <div class="id-card-one">
-        <form class="cred-card-one">
+        <form id="cred-card-one">
           <div class="input-box">
             <label class="style-number-one" for="numbers">Número do cartão</label>
-            <input class="style-number-two" type="text" id="input-numbers" nome="numbers"
-              placeholder="4154 2560 8541 9631" maxlength="16" required>
+            <input class="style-number-two" type="text" id="inputNumbers" nome="numbers"
+              placeholder="4154 2560 8541 9631" maxlength="19" required>
           </div>
           <div class="input-box">
             <label class="style-name-one" for="name">Títular do cartão</label>
-            <input class="style-name-two" type="text" id="input-name" nome="name" placeholder="MARIA DA SILVA"
+            <input class="style-name-two" type="text" id="inputName" nome="name" placeholder="MARIA DA SILVA"
               maxlength="32" required>
           </div>
         </form>
 
-        <form class="cred-card-two">
+        <form id="cred-card-two">
           <div class="input-expiration">
             <label class="style-expiration-one" for="expiration">Validade</label>
-            <input class="style-expiration-two" type="text" id="input-expiration" nome="expiration" placeholder="06/25"
+            <input class="style-expiration-two" type="text" id="inputExpiration" nome="expiration" placeholder="06/25"
               maxlength="5" required>
           </div>
           <div class="input-security-code">
             <label class="style-code-one" for="code-card">CVV</label>
-            <input class="style-code-two" type="text" id="input-code-card" nome="code-card" placeholder="123"
+            <input class="style-code-two" type="text" id="inputCodeCard" nome="code-card" placeholder="123"
               maxlength="3" required>
           </div>
         </form>
@@ -88,13 +88,17 @@
         </div>
       </div>
       <div class="formt-card">
+        <div class="logo-marca">
+          <img src="img/logo-visa.png" alt="">
+        </div>
+        <img src="img/chip.png" class="chip" alt="">
         <div class="id-card-two">
-          <div class="style-number-card">4154 2560 8541 9631</div>
+          <div class="styleNumberCard">4154 2560 8541 9631</div>
           <div class="flexbox-card">
             <div class="box-card">
               <span>Validade</span>
               <div class="expiration">
-                <span class="exp-date">06/25</span>
+                <span class="expDate">06/25</span>
               </div>
             </div>
             <div class="box-card">
@@ -104,7 +108,7 @@
             </div>
           </div>
           <div class="box-card-name">
-              <span class="name-card">MARIA DA SILVA</span>
+            <span class="nameCard">MARIA DA SILVA</span>
           </div>
         </div>
       </div>

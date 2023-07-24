@@ -163,7 +163,7 @@ input {
     margin-top: 60px;
  }
 
-.cred-card-one {
+#cred-card-one {
     font-family: 'shine';
     font-weight: normal;
     width: 32%;
@@ -172,7 +172,7 @@ input {
     gap: 16px;
 }
 
-.cred-card-two {
+#cred-card-two {
     font-family: 'shine';
     font-weight: normal;
     width: 32%;
@@ -264,11 +264,33 @@ input {
    
     border: 0;
     border-radius: 20px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 1)
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3)
+}
+
+.logo-marca{
+    text-align: right;
+    min-height: 50px;
+}
+
+.logo-marca img {
+    height: 100%;
+    object-fit: cover;
+    max-height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.chip{
+    width: 100%;
+    max-width: 40px;
+    margin-left: 25px;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
 }
 
 .id-card-two{
     width: 100%;
+    height: 40px;
     color: #fcfcfc;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -276,33 +298,33 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
-    
+    /* margin-top: 90px; */   
 }
 
-.style-number-card{
-    font-size: 22px;
+.styleNumberCard{
+    font-size: 18px;
     display: flex;
-    margin-right: 30px;
+    margin-right: 80px;
 }
 
 .flexbox-card{
-    font-size: 12px;
+    font-size: 11px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     gap: 50px;
     margin-top: 8px;
     margin-bottom: 8px;
+    margin-right: 70px;
 }
 
-.name-card{
-    font-size: 16px;
+.nameCard{
+    font-size: 14px;
     text-transform: uppercase;
     display: flex;
-    margin-right: 138px;
+    margin-right: 160px;
+    margin-bottom: 10px;
 }
-
 
 .container-for {
     background-image: url(img/music_pag4.jpg);
@@ -324,7 +346,6 @@ input {
     display: flex;
     flex-direction: column;
 }
-
 
 .button-menu-container {
     width: 35%;
@@ -348,7 +369,6 @@ input {
 .button:hover {
     filter: brightness(0.8);
 }
-
 
 .btn1 {
     background-color:#fd9e9e;

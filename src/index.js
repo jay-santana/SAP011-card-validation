@@ -1,7 +1,5 @@
 import validator from './validator.js';
 
-// console.log(validator);
-
 const buttonOnePag1 = document.querySelector('.btn1')
 const informsPag1 = document.querySelector('.container-one')
 const informsPag2 = document.querySelector('.container-two')
@@ -11,11 +9,16 @@ const informsPag3 = document.querySelector('.container-three')
 const buttonValidation = document.querySelector('.validation')
 const informsPag4 = document.querySelector('.container-for')
 const buttonReturnMenuTwo = document.querySelector('.return-menu-two')
-const idNumberCard = document.getElementById('input-numbers')
-const idName = document.getElementById('input-name')
-const idExpiration = document.getElementById('input-expiration')
-const idCodeCard = document.getElementById('input-code-card')
-
+const idNumberCard = document.getElementById('inputNumbers')
+const idName = document.getElementById('inputName')
+const idExpiration = document.getElementById('inputExpiration')
+const idCodeCard = document.getElementById('inputCodeCard')
+const formOne = document.getElementById('cred-card-one')
+const formTwo = document.getElementById('cred-card-two')
+const numberCard = document.querySelector('.styleNumberCard')
+const nameCardCred = document.querySelector('.nameCard')
+const expirationDate = document.querySelector('.expDate')
+const securityCode = document.querySelector('.code')
 
 //Funcionalidade dos botões das páginas
 buttonOnePag1.addEventListener('click', informStore)
@@ -56,11 +59,9 @@ function msgValidation(e) {
   validator.isValidCredCard(number)
 }
 
-
-
 //Mensagem de alerta: número de cartão vazios;
-function emptyAlert(e){
-  const idNumberCard = document.getElementById('input-numbers').value
+function emptyAlert(e) {
+  const idNumberCard = document.getElementById('inputNumbers').value
   if (idNumberCard == '') {
     alert('Você precisa digitar um número de cartão!')
     e.stopPropagation()
@@ -91,16 +92,51 @@ function returnMenuTwo() {
 }
 
 //Espelhamento dos dados do input para o cartão de crédito virtual
-document.getElementById('input-numbers'). oninput = () => {
-  document.querySelector('.style-number-card').innerText = document.getElementById('input-numbers').value
-}
-document.getElementById('input-name'). oninput = () => {
-  document.querySelector('.name-card').innerText = document.getElementById('input-name').value
-}
-document.getElementById('input-expiration'). oninput = () => {
-  document.querySelector('.exp-date').innerText = document.getElementById('input-expiration').value
-}
-document.getElementById('input-code-card'). oninput = () => {
-  document.querySelector('.code').innerText = document.getElementById('input-code-card').value
-}
+//Dados do número do cartão de crédito
+formOne.inputNumbers.addEventListener('keyup', (e) => {
+  let valorInputNumbers = e.target.value;
+
+  formOne.inputNumbers.value = valorInputNumbers.replace(/\D/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
+  numberCard.textContent = valorInputNumbers
+  
+  if (valorInputNumbers == '') {
+    numberCard.textContent = '4154 2560 8541 9631';
+  }
+})
+//Dados do nome do cartão de crédito
+formOne.inputName.addEventListener('keyup', (e) => {
+  let valorInputName = e.target.value;
+
+  formOne.inputName.value = valorInputName
+  nameCardCred.textContent = valorInputName
+
+  if (valorInputName == '') {
+    nameCardCred.textContent = 'MARIA DA SILVA';
+  }
+})
+//Dados de validade do cartão de crédito
+formTwo.inputExpiration.addEventListener('keyup', (e) => {
+  let valorInputValid = e.target.value;
+
+  formTwo.inputExpiration.value = valorInputValid
+  expirationDate.textContent = valorInputValid
+
+  if (valorInputValid == '') {
+    expirationDate.textContent = '06/25';
+  }
+})
+//Dados de segurança do cartão de crédito
+formTwo.inputCodeCard.addEventListener('keyup', (e) => {
+  let valorInputCode = e.target.value;
+
+  formTwo.inputCodeCard.value = valorInputCode
+  securityCode.textContent = valorInputCode
+
+  if (valorInputCode == '') {
+    securityCode.textContent = '123';
+  }
+})
+
+
 console.log(validator);
+
