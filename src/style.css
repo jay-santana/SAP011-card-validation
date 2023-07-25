@@ -195,9 +195,10 @@ input {
 }
 
 .style-number-two::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px; 
     color: #c9c7c7;
-    text-align: center;
-    font-size: 16px;      
+    text-align: center;     
 }
 
 .style-name-one {
@@ -213,9 +214,10 @@ input {
 }
 
 .style-name-two::placeholder {
-    color: #c9c7c7;
-    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
+    color: #c9c7c7;
+    text-align: center;  
 }
 
 .style-expiration-one {
@@ -231,9 +233,10 @@ input {
 }
 
 .style-expiration-two::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
     color: #c9c7c7;
     text-align: center;
-    font-size: 16px; 
 }
 
 .style-code-one {
@@ -249,9 +252,10 @@ input {
   }
 
 .style-code-two::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
     color: #c9c7c7;
-    text-align: center;
-    font-size: 16px; 
+    text-align: center; 
 }
 
 .formt-card {
