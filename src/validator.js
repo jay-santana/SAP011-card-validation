@@ -22,13 +22,16 @@ const validator = {
     for (let i = 0; i < numberDigits.length; i++) {
       sum = sum + numberDigits[i]
     }
+    // console.log(sum)
+    
     //Passo 8: verificar se a soma dos dígitos é multiplo de 10;
     //Passo 9: exibir mensagem de validação.
     if (sum % 10 === 0) {
       return(true)
     } else {
-      return(false)
+      return(false)  
     }
+    
   },
  
   maskify: function(number){
@@ -49,5 +52,4 @@ const validator = {
     return accumulator
   }
 }
-
 export default validator;

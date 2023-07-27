@@ -20,12 +20,14 @@ const nameCardCred = document.querySelector('.nameCard')
 const expirationDate = document.querySelector('.expDate')
 const securityCode = document.querySelector('.code')
 
+
 //Funcionalidade dos botões das páginas
 buttonOnePag1.addEventListener('click', informStore)
 buttonReturnMenuOne.addEventListener('click', returnMenuOne)
 buttonFivePag1.addEventListener('click', idCard)
 buttonValidation.addEventListener('click', emptyNumber)
 buttonReturnMenuTwo.addEventListener('click', returnMenuTwo)
+buttonReturnMenuTwo.addEventListener('click', reset)
 
 //Ir para pág. 2
 function informStore() {
@@ -54,36 +56,23 @@ function emptyNumber(e) {
     e.stopPropagation()
   } else {
     const number = idNumberCard.replace(/\s/g, '')
+    // const maskNumber = validator.maskify(number)
+    // idNumberCard = maskNumber
+    validator.maskify(number)
+    console.log(validator.maskify)
     finalPag(number)
   }
 }
 
-//Mensagem de validação do cartão e capturar apenas números sem espaços e outros caracteres 
-// function msgValidation(e) {
-//   e.preventDefault()
-
-//   const inputValueN = idNumberCard.value
-//   const number = inputValueN.replace(/\s/g, '')
-//   validator.isValid(number)
-//   validator.maskify(number)
-
-//   if (validator.isValid(number)){
-//     document.querySelector('.result-text').innerHTML = 'Obaa!! cartão de credito válido!'
-//   } else {
-//     document.querySelector('.result-text').innerHTML = 'Cartão de credito inválido! :('
-// }
-// }
 //Ir para a pág. 4 e mensagem de validação do cartão
 function finalPag(number) {
   informsPag3.classList.add('hide')
   informsPag4.classList.remove('hide')
 
-  validator.maskify(number)
-
   if (validator.isValid(number)){
-    document.querySelector('.result-text').innerHTML = 'Obaa!! cartão de credito válido!'
+    document.querySelector('.result-text').innerHTML = ('Obaa!! cartão de crédito válido!')
   } else {
-    document.querySelector('.result-text').innerHTML = 'Cartão de credito inválido! :('
+    document.querySelector('.result-text').innerHTML = ('Cartão de crédito inválido! :(')
   }
 }
 
@@ -98,14 +87,23 @@ function returnMenuTwo() {
   idCodeCard.value = '';
 }
 
+//Reiniciar a página
+function reset(){
+  location.reload();
+}
+
 //Espelhamento dos dados do input para o cartão de crédito virtual
 //Dados do número do cartão de crédito
 formOne.inputNumbers.addEventListener('keyup', (e) => {
   const valorInputNumbers = e.target.value;
 
-  formOne.inputNumbers.value = valorInputNumbers.replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
-  numberCard.textContent = valorInputNumbers
+  const maskValue = valorInputNumbers.replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
+  const maskSpace = maskValue.replace(/\s/g, '')
+
+  formOne.inputNumbers.value = maskValue;
+  numberCard.textContent = validator.maskify(maskSpace).replace(/\s/g, '').replace(/([#]{4})/g, '$1 ').trim();
   
+  // console.log(numberCard)
   if (valorInputNumbers === '') {
     numberCard.textContent = '4154 2560 8541 9631';
   }
@@ -143,7 +141,6 @@ formTwo.inputCodeCard.addEventListener('keyup', (e) => {
     securityCode.textContent = '123';
   }
 })
-
 
 // console.log(validator);
 

@@ -50,43 +50,41 @@
 
   <div class="container-three hide">
     <div class="inform-container-three">
-      <span>
-        <header>
-          <h2>Validação do cartão de crédito</h2>
-        </header>
-      </span>
+      <header>
+        <h2>Validação do cartão de crédito</h2>
+      </header>
     </div>
     <div class="container-card">
       <div class="id-card-one">
         <form id="cred-card-one">
           <div class="input-box">
-            <label class="style-number-one" for="numbers">Número do cartão</label>
-            <input class="style-number-two" type="text" id="inputNumbers" nome="numbers"
+            <label class="style-number-one" for="inputNumbers">Número do cartão</label>
+            <input class="style-number-two" type="text" id="inputNumbers" nome="inputNumbers"
               placeholder="4154 2560 8541 9631" maxlength="19" required>
           </div>
           <div class="input-box">
-            <label class="style-name-one" for="name">Títular do cartão</label>
-            <input class="style-name-two" type="text" id="inputName" nome="name" placeholder="MARIA DA SILVA"
+            <label class="style-name-one" for="inputName">Títular do cartão</label>
+            <input class="style-name-two" type="text" id="inputName" nome="inputName" placeholder="MARIA DA SILVA"
               maxlength="32" required>
           </div>
         </form>
 
         <form id="cred-card-two">
           <div class="input-expiration">
-            <label class="style-expiration-one" for="expiration">Validade</label>
-            <input class="style-expiration-two" type="text" id="inputExpiration" nome="expiration" placeholder="06/25"
+            <label class="style-expiration-one" for="inputExpiration">Validade</label>
+            <input class="style-expiration-two" type="text" id="inputExpiration" nome="inputExpiration" placeholder="06/25"
               maxlength="5" required>
           </div>
           <div class="input-security-code">
-            <label class="style-code-one" for="code-card">CVV</label>
-            <input class="style-code-two" type="text" id="inputCodeCard" nome="code-card" placeholder="123"
-              maxlength="3" required>
+            <label class="style-code-one" for="inputCodeCard">CVV</label>
+            <input class="style-code-two" type="text" id="inputCodeCard" nome="inputCodeCard" placeholder="123" maxlength="3" required>
           </div>
         </form>
         <div class="text-result">
           <button class="validation button" type="submit">Validar</button>
         </div>
       </div>
+
       <div class="formt-card">
         <div class="logo-marca">
           <img src="img/logo-visa.png" alt="">
@@ -113,18 +111,12 @@
         </div>
       </div>
     </div>
-    <!-- <div class="informs-intern-card">
-      <div>Number</div>
-      <div>Name</div>
-      <div>Validade</div>
-      <div>CVV</div>
-    </div> -->
   </div>
 
   <div class="container-for hide">
     <div class="inform-container-for">
+      <div class="result-text"></div>
       <div class="card-validation">
-        <p class="result-text"></p>
         <button class="return-menu-two button" type="button">Voltar ao menu</button>
         <button class="confirm button" type="button">Confirmar compra</button>
       </div>

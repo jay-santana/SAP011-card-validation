@@ -342,17 +342,32 @@ input {
 
 .inform-container-for {
     margin-left: 9%;
-    margin-top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 210px;
 }
 
 .card-validation {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
+    margin-right: 80px;
+}
+
+.result-text{
+    width: 40%;
+    font-family: 'shine';
+    font-size: 55px;
+    color: #8b9ff6;
+    text-align: center;
+    margin-right: 930px;
 }
 
 .button-menu-container {
-    width: 35%;
+    width: 30%;
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
