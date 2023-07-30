@@ -50,7 +50,7 @@ Dessa forma, as cores utilizadas foram pensadas levando em consideração a tem�
 
 Protótipo da tela de validação do cartão de crédito:
 <p align="center">
-<img src="img/tela_de-validação-do_cartão.png" alt="tela de validação do cartão de crédito" />
+<img src="img/tela_de_validação_do_cartão.png" alt="tela de validação do cartão de crédito" />
 </p>
 
 ## 5. Interface do projeto e objetivos alcançados
