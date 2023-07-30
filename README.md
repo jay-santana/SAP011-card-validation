@@ -49,14 +49,18 @@ O protótipo do projeto foi desenvolvido considerando o tema de aplicação para
 Dessa forma, as cores utilizadas foram pensadas levando em consideração a temática da aplicação que consiste em um site de instrumentos musicais voltado para pais e familiares de bebês e crianças até 5 anos, e professores de musicalização infantil (faixa etária de 0 a 5 anos). Portanto, este espaço foi pensado para despertar no usuário um sentimento de acolhimento, cuidado e carinho, contendo cores e elementos que despertam esses sentimentos.
 
 Protótipo da tela de validação do cartão de crédito:
-![protótipo da tela de validação do cartão de crédito] [Alt text](<tela de validação do cartão.png>)
+<p align="center">
+<img src="img/tela_de-validação-do_cartão.png" alt="tela de validação do cartão de crédito" />
+</p>
 
 ## 5. Interface do projeto e objetivos alcançados
 
 A interface do projeto foi idealizada para trazer autonomia, praticidade e segurança ao usuário quanto a validação do número de cartão de crédito, para realização das suas compras de maneira on-line. Dessa forma, a aplicação do projeto foi pensada para ser demonstrada através da navegação por um site de compras, e que fosse de fácil uso, intuitiva e interativa, no qual o usuário irá preencher os dados dos campos vazios conseguindo visualizá-los de maneira imediata no cartão interativo ao lado, tendo os números do cartão mascarados, exceto os quatro últimos dígitos, para uma maior segurança, possibilitando ao usuário ter uma experiência satisfatória de uso.
 
 Demonstração de uso:
-colocar o gif aqui
+<p align="center">
+<img src="img/projeto_card_validator_js.gif" alt="Demonstração: Card-Validator-JS" />
+</p>
 
 [✔] Possui uma interface que possibilita inserir o número que desejamos validar.
         
@@ -73,7 +77,9 @@ colocar o gif aqui
 ## 6. Instruções de uso
 
 Para usar o Card-Validator-JS, nessa aplicação de uso. O usuário terá acesso aos botões de navegação do site na primeira página. Para ter acesso ao validador de cartão de crédito o usuário deverá clicar no botão “comprar”, no qual será direcionado para uma segunda página, no qual deverá realizar o preenchimento dos dados de validação do cartão. 
+
 Nessa página o usuário deverá preencher como campo obrigatório o número do cartão de crédito, caso esse campo não seja preenchido o usuário será impossibilitado de prosseguir com a validação do cartão. Portanto, o usuário deverá preencher os campos de “número do cartão”, “titular do cartão”, “validade” e “CVV”. Ao preencher esses campos o usuário poderá visualizar os seus dados de forma imediata no cartão interativo e também contará com a segurança em ter os números do cartão de crédito mascarados, exceto os quatro últimos dígitos. Após preencher todos os dados, o usuário deverá clicar no botão “Validar” para ter o número de cartão validado. 
+
 Nesse momento, ele será direcionado para uma terceira página, no qual poderá visualizar a mensagem de validação ou invalidação do cartão de crédito para poder prosseguir com a confirmação da compra. Para retornar a página inicial, o usuário deverá clicar no botão “voltar ao menu” que irá direcioná-lo a primeira página, o botão “confirmar compra” é apenas ilustrativo.
 
 ## 7. Especificações Técnicas
@@ -99,4 +105,4 @@ Ideias para melhorias futuras:
 
 ## 9. Desenvolvedora
 
-* Jayanny Santana: (https://github.com/jay-santana)
+- *Jayanny Santana*: <a href="https://github.com/jay-santana"> @jay-santana</a>

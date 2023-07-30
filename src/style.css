@@ -279,9 +279,9 @@ input {
 .logo-marca img {
     height: 100%;
     object-fit: cover;
-    max-height: 50px;
+    max-height: 30px;
     margin-right: 20px;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .chip{
@@ -289,7 +289,7 @@ input {
     max-width: 40px;
     margin-left: 25px;
     /* margin-top: 10px; */
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .id-card-two{
@@ -302,7 +302,7 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 90px; */   
+    /* margin-top: 90px;   */
 }
 
 .styleNumberCard{
@@ -323,11 +323,13 @@ input {
 }
 
 .nameCard{
+    width: 100%;
     font-size: 14px;
     text-transform: uppercase;
     display: flex;
-    margin-right: 160px;
+    margin-right: 180px;
     margin-bottom: 10px;
+    padding-left: 25px;
 }
 
 .container-for {
