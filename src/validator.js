@@ -23,7 +23,7 @@ const validator = {
       sum = sum + numberDigits[i]
     }
     // console.log(sum)
-    
+
     //Passo 8: verificar se a soma dos dígitos é multiplo de 10;
     //Passo 9: exibir mensagem de validação.
     if (sum % 10 === 0) {
@@ -48,7 +48,7 @@ const validator = {
         accumulator = accumulator + maskNumberCard[i]
       }
     }
-    // console.log(accumulator)
+    console.log(accumulator)
     return accumulator
   }
 }

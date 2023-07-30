@@ -2,50 +2,33 @@
 
 ## Índice
 
-* [1. Introdução](#1-Introdução)
+* [1. Prefácil](#1-Prefácil)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Considerações gerais](#3-considerações-gerais)
-* [4. Marco: Critérios de Aceitação Mínimos do Projeto](#4-marco-critérios-de-aceitação-mínimos-do-projeto)
-* [5. Marco Opcional: Mostrar a franquia do cartão](#5-marco-opcional-mostrar-a-franquia-do-cartão)
-* [6. Considerações técnicas](#6-considerações-técnicas)
-* [7. Objetivos de aprendizagem](#7-objetivos-de-aprendizagem)
-* [8. Guias, dicas e leituras
-  complementares](#8-guias-dicas-e-leituras-complementares)
-* [9. Para considerar o feedback do projeto](#9-para-considerar-o-feedback-do-projeto)
+* [3. Sobre o tema e usuários](#3-sobre-tema-e-usuários)
+* [4. Protótipo](#4-protótipo)
+* [5. Interface do projeto e objetivos alcançados](#5-interface-do-projeto-e-objetivos-alcançados)
+* [6. Instruções de uso](#6-instruções-de-uso)
+* [7. Especificações Técnicas](#7-especificações-técnicas)
+* [8. Implementações futuras](#8-implementações-futuras)
+* [9. Desenvolvedora](#9-desenvolvedora)
 
 ***
 
-## 1. Introdução
+## 1. Prefácio
 
-O [algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm), também
-chamado de módulo 10, é um método de soma de verificação, usado para validar
-números de identificação, como o IMEI de telefones celulares, cartões de crédito
-etc.
+Este projeto foi desenvolvido como parte do bootcamp da Laboratória e consiste em um projeto de nível 1 de um catálogo de projetos de complexidade crescente, associados a objetivos de aprendizagem concretos. Portanto, se trata de uma aplicação web, tendo como principal objetivo permitir ao usuário validar o número de um cartão de crédito, implementando a funcionalidade para ocultar todos os dígitos de um cartão, exceto os quatro últimos.
 
-Esse algoritmo é simples. Obtemos o inverso do número a ser verificado (que
-contém apenas dígitos [0-9]); todos os números que ocupam uma posição par devem
-ser multiplicados por dois; se esse número for maior ou igual a 10, devemos
-adicionar os dígitos do resultado; o número a verificar será válido se a soma de
-seus dígitos finais for um múltiplo de 10.
+O projeto utilizou como método de validação o [Algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm), que consiste em um método de soma de verificação, usado para validar números de identificação, como o IMEI de telefones celulares, cartões de crédito etc.
+
+Esse algoritmo é simples. Primeiramente, obtemos o inverso do número a ser verificado (esse número deve conter apenas dígitos de [0-9]); Logo em seguida, todos os números que ocupam uma posição par devem ser multiplicados por dois, se após a multiplicação esse número for maior ou igual a 10, devemos somar o produto desse resultado; Na sequência devemos somar todos os números obtidos, e por fim, o número a verificar será válido se a soma de seus dígitos finais for um múltiplo de 10.
 
 ![gráfico do algoritmo de
 Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
 
 ## 2. Resumo do projeto
 
-Neste projeto, você precisará criar um aplicativo da Web que permita ao usuário
-validar o número de um cartão de crédito.  Além disso, você precisará
-implementar a funcionalidade para ocultar todos os dígitos de um cartão, exceto
-os quatro últimos.
-
-O tema é livre. Você deve pensar em quais situações da vida real um cartão de
-crédito precisaria ser validado e em como deveria ser a experiência do usuário
-(telas, explicações, mensagens, cores, marca?) etc.
-
-Como continuação do projeto de pré-admissão, você retrabalhará os fundamentos
-do JavaScript, incluindo conceitos como variáveis, condicionais e funções,
-bem como eventos e manipulação básica de DOM, fundamentos HTML e CSS.
-Ao desenvolver este projeto, você também se familiarizará com novos conceitos.
+O Card-Validation-JS é uma aplicação web que permite ao usuário validar o número de um cartão de crédito de maneira simples, eficiente e segura, objetivando a sua aplicação para a realização de compras de forma on-line.
+Nessa perspectiva, foi desenvolvido um site de tema livre para que fosse possível implantar o validador de cartão de crédito para contextualização e demonstração de uso.
 
 ### Os objetivos gerais deste projeto são os seguintes
 
@@ -56,381 +39,64 @@ Ao desenvolver este projeto, você também se familiarizará com novos conceitos
 * Aprenda sobre objetos, estruturas, métodos e iteração (loops) em JavaScript
 * Implementar controle de versão com git (e a plataforma github)
 
-## 3. Considerações gerais
-
-* Resolvemos este projeto **individualmente**.
-* O intervalo de tempo estimado para concluir o projeto é de 1 a 3 Sprints.
-* Concentre-se em aprender e não apenas "concluir" o projeto.
-* Sugerimos que você não tente saber tudo antes de começar a codificar.
-  Não se preocupe muito agora com o que você _ainda_ não entende.
-  Você vai aprender.
-
-## 4. Marco: Critérios de Aceitação Mínimos do Projeto
-
-Esses são os requisitos que seu projeto deve atender para garantir que
-seu trabalho atenda aos objetivos principais.
-
-**1. Uma interface que deve permitir ao usuário:**  
-
-* Inserir o número que desejamos validar. Use apenas caracteres
-  numéricos (dígitos) no cartão para validar [0-9].
-* Constatar se o resultado é válido ou não.
-* Ocultar todos os dígitos do número do cartão, excetuando os últimos 4
-  caracteres.
-* Não deve poder inserir um campo vazio.
-
-**2. Testes unitários dos métodos.**
-Os métodos `validator` (`isValid` e `maskify`) devem ser cobertos por testes unitários.
-
-**3. Código do seu projeto enviado para seu repositório e interface "implantada".**
-O código final deve estar um repositório no GitHub. A interface, ou página da web,
-deve ser "implantada" (acessível online publicamente) usando o GitHub Pages.
-
-**4. Um README contendo uma definição de produto.**
-No README, conte-nos como você pensou sobre os usuários e qual foi o seu
-processo para definir o produto final em nível de experiência e interface.
-Estas perguntas servem de guia:
-
-* Quem são os principais usuários do produto
-* Quais são os objetivos desses usuários em relação ao seu produto
-* Como você acha que o produto que você está criando está resolvendo seus
-  problemas
-
-Com esses requisitos atendidos, você pode agendar um feedback do projeto com
-um coach.
-
-## 5. Marco Opcional: Mostrar a franquia do cartão
-
-As partes opcionais permitem que você se aprofunde um pouco mais
-nos objetivos de aprendizagem do projeto. Tudo na vida tem prós e contras, decida
-sabiamente se você quiser gastar o tempo aprofundando/refinando ou aprendendo coisas
-novas no próximo projeto.
-
-No marco opcional você também pode validar se o número do
-cartão é válido, mostre a [franquia](https://es.wikipedia.org/wiki/N%C3%BAmero_de_programa_bancaria)
-do cartão (por exemplo, Visa, MasterCard, etc) usando estas [regras de validação](https://stevemorse.org/ssn/cc.html).
-Se você escrever um novo método para isso, terá que fazer testes de unidade.
-
-## 6. Considerações técnicas
-
-A lógica do projeto deve estar implementada inteiramente em JavaScript. Nesse
-projeto **NÃO** está permitido usar bibliotecas ou frameworks, só vanilla
-JavaScript.
-
-Para iniciar este projeto você terá que fazer um _fork_ e _clone_ desse
-repositório, que contém um _boilerplate_ com testes. Um _boilerplate_ é a
-estrutura básica de um projeto que serve como ponto de partida com arquivos
-iniciais e configuração básica de dependências e testes.
-
-Os testes unitários devem cobrir no mínimo de 70% dos _statements_, _functions_
-e _lines_, e um mínimo de 50% de _branches_. O _boilerplate_ já contem o setup e
-configurações necessárias para executar os testes assim como _code coverage_
-para ver o nível de cobertura dos testes usando o comando `npm test`.
-
-O _boilerplate_ que fornecemos contém esta estrutura:
-
-```text
-./
-├── .babelrc
-├── .editorconfig
-├── .eslintrc
-├── .gitignore
-├── README.md
-├── package.json
-├── src
-│   ├── validator.js
-│   ├── index.html
-│   ├── index.js
-│   └── style.css
-└── test
-    ├── .eslintrc
-    └── validator.spec.js
-```
-
-### Descrição de scripts/arquivos
-
-* `README.md`: deve explicar como "deployar", instalar e executar a aplicação,
-  assim como uma introdução a aplicação, suas funcionalidades e as decisões que
-  foram tomadas.
-* `src/index.html`: aqui será o ponto de entrada da sua aplicação. Este arquivo
-  deve conter a marcação HTML e chamar o CSS e JavaScript necessários.
-* `src/validator.js`: aqui você deve implementar o objeto `validator`, o qual
-  já está _exportado_ no _boilerplate_. Este objeto (`validator`) deve conter
-  dois métodos:
-  - `validator.isValid(creditCardNumber)`: `creditCardNumber` é um `string`
-    com o número do cartão a ser verificado. Esta função deve retornar um
-    `boolean`, dependendo de sua validade, de acordo com o [algoritmo de
-    Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm).
-  - `validator.maskify(creditCardNumber)`: `creditCardNumber` é um `string`
-    com o número do cartão e esta função deve retornar um `string` onde todos,
-    exceto os últimos quatro caracteres, são substituídos por um número (`#`) ou
-    🐱. Essa função deve sempre manter os quatro últimos caracteres intactos,
-    mesmo quando o `string` for mais curto.
+## 3. Sobre o tema e usuários
 
-    Exemplo de uso:
+Os principais usuários do Card-Validation-JS são empresas do ramo de venda de produtos de atacado e varejo, que desejam aumentar suas vendas utilizando a categoria on-line, permitindo aos seus clientes mais autonomia, praticidade e segurança na realização das suas compras. Uma vez que esse cliente poderá validar suas compras utilizando o validador de cartão de crédito de forma simples e segura, com a implementação do cartão virtual que permite ao usuário visualizar suas informações de maneira interativa e com a segurança da funcionalidade para ocultar todos os dígitos do cartão, exceto os quatro últimos.
 
-    ```js
-    maskify('4556364607935616') === '############5616'
-    maskify(     '64607935616') ===      '#######5616'
-    maskify(               '1') ===                '1'
-    maskify(               '')  ===                ''
-    ```
+## 4. Protótipo
 
-* `src/index.js`: aqui você deve escutar os eventos de DOM, chamar
-  `validator.isValid()` e `validator.maskify()`.
-* `test/validator.spec.js`: este arquivo contem alguns testes de exemplo e aqui
-  você deve implementar os testes para `validator.isValid()` e `validator.maskify()`.
+O protótipo do projeto foi desenvolvido considerando o tema de aplicação para contextualização e demonstração de uso.
+Dessa forma, as cores utilizadas foram pensadas levando em consideração a temática da aplicação que consiste em um site de instrumentos musicais voltado para pais e familiares de bebês e crianças até 5 anos, e professores de musicalização infantil (faixa etária de 0 a 5 anos). Portanto, este espaço foi pensado para despertar no usuário um sentimento de acolhimento, cuidado e carinho, contendo cores e elementos que despertam esses sentimentos.
 
-O _boilerplate_ inclui tarefas que executam [eslint](https://eslint.org/) e
-[htmlhint](https://github.com/yaniswang/HTMLHint) para verificar o `HTML` e
-`JavaScript` com respeito a uma guia de estilos. Ambas tarefas são executadas
-automaticamente antes de executar os testes quando usamos o comando `npm run
-test`.
-No caso do `JavaScript` estamos usando o `eslint` que está configurado no
-arquivo `.eslintrc` que contem o mínimo de informação como versão do
-JavaScript/ECMAScript, o ambiente (_browser_ nesse caso) e as [regras
-recomendadas (`"eslint:recommended"`)](https://eslint.org/docs/rules/).
-Nas regras/guias de estilo usaremos das recomendações padrão tanto para o
-`eslint` quanto `htmlhint`.
+Protótipo da tela de validação do cartão de crédito:
+![protótipo da tela de validação do cartão de crédito] [Alt text](<tela de validação do cartão.png>)
 
-#### Deploy
+## 5. Interface do projeto e objetivos alcançados
 
-Disponibilizar os projetos e colocá-los "no ar" vai ser parte cotidiana do
-ciclo de desenvolvimento em produtos de tecnologia.
+A interface do projeto foi idealizada para trazer autonomia, praticidade e segurança ao usuário quanto a validação do número de cartão de crédito, para realização das suas compras de maneira on-line. Dessa forma, a aplicação do projeto foi pensada para ser demonstrada através da navegação por um site de compras, e que fosse de fácil uso, intuitiva e interativa, no qual o usuário irá preencher os dados dos campos vazios conseguindo visualizá-los de maneira imediata no cartão interativo ao lado, tendo os números do cartão mascarados, exceto os quatro últimos dígitos, para uma maior segurança, possibilitando ao usuário ter uma experiência satisfatória de uso.
 
-Para este projeto, utilizaremos o Github Pages para essa finalidade.
-O comando `npm run deploy` pode te auxiliar nessa tarefa e você pode também
-consultar a [documentação oficial](https://docs.github.com/pt/pages).
+Demonstração de uso:
+colocar o gif aqui
 
-## 7. Objetivos de aprendizagem
+[✔] Possui uma interface que possibilita inserir o número que desejamos validar.
+        
+[✔] Use apenas caracteres numéricos (dígitos) no cartão para validar [0-9].
 
-Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projeto. Pense nisso para decidir sua estratégia de trabalho.
+[✔] Constatar se o resultado é válido ou não.
 
-### HTML
+[✔] Ocultar todos os dígitos do número do cartão, excetuando os últimos 4 caracteres.
 
-- [ ] **Uso de HTML semântico**
+[✔] Não deve poder inserir um campo vazio
 
-  <details><summary>Links</summary><p>
+[✔] Testes unitários dos métodos validator (isValid e maskify).
 
-  * [HTML semântico](https://curriculum.laboratoria.la/pt/topics/html/02-html5/02-semantic-html)
-  * [Semantics in HTML - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+## 6. Instruções de uso
 
-### CSS
+Para usar o Card-Validator-JS, nessa aplicação de uso. O usuário terá acesso aos botões de navegação do site na primeira página. Para ter acesso ao validador de cartão de crédito o usuário deverá clicar no botão “comprar”, no qual será direcionado para uma segunda página, no qual deverá realizar o preenchimento dos dados de validação do cartão. 
+Nessa página o usuário deverá preencher como campo obrigatório o número do cartão de crédito, caso esse campo não seja preenchido o usuário será impossibilitado de prosseguir com a validação do cartão. Portanto, o usuário deverá preencher os campos de “número do cartão”, “titular do cartão”, “validade” e “CVV”. Ao preencher esses campos o usuário poderá visualizar os seus dados de forma imediata no cartão interativo e também contará com a segurança em ter os números do cartão de crédito mascarados, exceto os quatro últimos dígitos. Após preencher todos os dados, o usuário deverá clicar no botão “Validar” para ter o número de cartão validado. 
+Nesse momento, ele será direcionado para uma terceira página, no qual poderá visualizar a mensagem de validação ou invalidação do cartão de crédito para poder prosseguir com a confirmação da compra. Para retornar a página inicial, o usuário deverá clicar no botão “voltar ao menu” que irá direcioná-lo a primeira página, o botão “confirmar compra” é apenas ilustrativo.
 
-- [ ] **Uso de seletores de CSS**
+## 7. Especificações Técnicas
 
-  <details><summary>Links</summary><p>
+O projeto foi desenvolvido utilizando como ferramentas e tecnologias:
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/pt/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/pt_BR/docs/Web/CSS/CSS_Selectors)
-</p></details>
+* HTML
+* CSS
+* JavaScript
+* Visual Studio Code
+* Node.js
+* GitBash
+* GitHub
 
-- [ ] **Modelo de caixa (box model): borda, margem, preenchimento**
+## 8. Implementações futuras
 
-  <details><summary>Links</summary><p>
+Ideias para melhorias futuras:
 
-  * [Modelo de Caixa e Display](https://curriculum.laboratoria.la/pt/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+* Tornar todos os campos de preenchimento obrigatórios;
+* Permitir ao usuário inserir apenas letras no campo “titular do cartão”;
+* Permitir ao usuário inserir apenas números no campo “CVV”;
+* Mostrar a franquia do cartão (por exemplo, Visa, MasterCard, etc).
 
-### Web APIs
+## 9. Desenvolvedora
 
-- [ ] **Uso de seletores de DOM**
-
-  <details><summary>Links</summary><p>
-
-  * [Modificando o DOM](https://curriculum.laboratoria.la/pt/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introdução ao DOM - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-  * [Locating DOM elements using selectors - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
-
-- [ ] **Manipulação de eventos de DOM (listeners, propagação, delegação)**
-
-  <details><summary>Links</summary><p>
-
-  * [Introdução a eventos - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/removeEventListener)
-  * [Objeto Event](https://developer.mozilla.org/pt-BR/docs/Web/API/Event)
-</p></details>
-
-- [ ] **Manipulação dinâmica de DOM**
-
-  <details><summary>Links</summary><p>
-
-  * [Introdução ao DOM](https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM/Introdu%C3%A7%C3%A3o)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Node/textContent)
-</p></details>
-
-### JavaScript
-
-- [ ] **Tipos de dados primitivos**
-
-  <details><summary>Links</summary><p>
-
-  * [Valores Primitivos - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures#valores_primitivos)
-</p></details>
-
-- [ ] **Strings (cadeias de caracteres)**
-
-  <details><summary>Links</summary><p>
-
-  * [Strings](https://curriculum.laboratoria.la/pt/topics/javascript/06-strings)
-  * [String — Cadeia de caracteres - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String)
-</p></details>
-
-- [ ] **Variáveis (declaração, atribuição, escopo)**
-
-  <details><summary>Links</summary><p>
-
-  * [Valores, tipos de dados e operadores](https://curriculum.laboratoria.la/pt/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variáveis](https://curriculum.laboratoria.la/pt/topics/javascript/01-basics/02-variables)
-</p></details>
-
-- [ ] **Uso de condicionais (if-else, switch, operador ternário, lógica booleana)**
-
-  <details><summary>Links</summary><p>
-
-  * [Estruturas condicionais e repetitivas](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisões no seu código — condicionais - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
-
-- [ ] **Uso de laços (while, for, for..of)**
-
-  <details><summary>Links</summary><p>
-
-  * [Laços (Loops)](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/02-loops)
-  * [Laços e iterações - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
-
-- [ ] **Funções (params, args, return)**
-
-  <details><summary>Links</summary><p>
-
-  * [Funções (controle de fluxo)](https://curriculum.laboratoria.la/pt/topics/javascript/02-flow-control/03-functions)
-  * [Funções clássicas](https://curriculum.laboratoria.la/pt/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/pt/topics/javascript/03-functions/02-arrow)
-  * [Funções — blocos reutilizáveis de código - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
-
-- [ ] **Testes unitários (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Introdução ao Jest - Documentação oficial](https://jestjs.io/docs/pt-BR/getting-started)
-</p></details>
-
-- [ ] **Módulos de ECMAScript (ES modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descritivos (Nomenclatura e Semântica)**
-
-### Controle de Versões (Git e GitHub)
-
-- [ ] **Git: Instalação e configuração**
-
-- [ ] **Git: Controle de versão com git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **GitHub: Criação de contas e repositórios, configuração de chave SSH**
-
-- [ ] **GitHub: Implantação com GitHub Pages**
-
-  <details><summary>Links</summary><p>
-
-  * [Site oficial do GitHub Pages](https://pages.github.com/)
-</p></details>
-
-### Centrado no usuário
-
-- [ ] **Desenhar e desenvolver um produto ou serviço colocando as usuárias no centro**
-
-### Design de produto
-
-- [ ] **Criar protótipos para obter feedback e iterar**
-
-- [ ] **Aplicar os princípios de desenho visual (contraste, alinhamento, hierarquia)**
-
-## 8. Guias, dicas e leituras complementares
-
-### Primeiros passos
-
-1. Se assegure de ter um bom :pencil: editor de texto, algo
-   como [VS Code](https://code.visualstudio.com/).
-2. Para executar os comandos você precisará de um :shell: UNIX Shell, que é um
-   programa que interpreta linhas de comando (command-line interpreter) e também
-   deve ter o git instalado. Se você usa um sistema operacional "UNIX-like",
-   como GNU/Linux ou MacOS, você já tem um _shell_ (terminal) instalado (e
-   provavelmente o `git` também). Se você usa Windows você pode usar o [Git
-   bash](https://git-scm.com/download/win), embora seja recomendado que você
-   teste :penguin: GNU/Linux.
-3. Faça seu próprio :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) do repositório. Seus
-   _mentores_ compartilharão com você um _link_ para um repositório privado e te
-   darão acesso a este repositório.
-4. :arrow_down: [Clone](https://help.github.com/articles/cloning-a-repository/)
-   o _fork_ para seu computador (cópia local).
-5. 📦 Instale as dependências do projeto rodando o comando `npm install`. Mas
-   antes disso tenha certeza de ter instalado o [Node.js](https://nodejs.org/)
-   (que inclui o [npm](https://docs.npmjs.com/)).
-6. Se tudo foi bem, você deve conseguir executar os :traffic_light: testes
-   unitários com o comando `npm test`.
-7. Para ver a interface do seu programa no navegador, use o comando `npm start`
-   para iniciar o servidor web e entre na url `http://localhost:5000` no seu
-   navegador.
-8. Let's Code! :rocket:
-
-Este [video](https://drive.google.com/file/d/1CM6ZfpGfJMF6A8IcXoK5cFBBq-CY8oBR/view?usp=sharing)
-da Paloma também pode te ajudar nos seus primeiros passos ;)
-
-### Recursos e tópicos relacionados
-
-Participe do canal Slack
-[#project-card-validation](https://claseslaboratoria.slack.com/archives/C03LXJ10WJD)
-para conversar e pedir ajuda no projeto.
-
-Aqui está um vídeo de Michelle que mostra o algoritmo de Luhn (o vídeo está em
-espanhol, mas pode ser útil) e mais algumas coisas que você deve saber para
-realizar este projeto. Ouça com atenção e siga os conselhos dela! :)
-
-[![dicas de cartão de
-crédito](https://img.youtube.com/vi/f0zL6Ot9y_w/0.jpg)](https://www.youtube.com/watch?v=f0zL6Ot9y_w)
-
-[Link](https://www.youtube.com/watch?v=f0zL6Ot9y_w)
-
-Desenvolvimento de front-end:
-
-* Saiba mais sobre [strings](https://javascript.info/string),
-[arrays](https://javascript.info/array),
-[iterate arrays](https://www.freecodecamp.org/news/how-to-loop-through-an-array-in-javascript-js-iterate-tutorial/),
-[objetos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects)
-  e [como definir métodos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#definindo_m%C3%A9todos##)
-
-## 9. Para considerar o feedback do projeto
-
-Em resumo, os critérios mínimos de aceitação do projeto para considerar o
-Project Feedback:
-
-* [ ] Possui uma interface que permite ao usuário permita ao usuário
-  validar o número de um cartão de crédito e ocultar todos os dígitos de um cartão
-  e ocultar o número até os 4 últimos dígitos.
-* [ ] O projeto será entregue incluindo testes unitários dos métodos
-  `validator` (`isValid` e `maskify`).
-* [ ] O projeto será entregue livre de _erros_ de `eslint` (_warnings_ são ok).
-* [ ] O código do seu projeto será entregue no GitHub.
-* [ ] A interface será "implantada" usando o GitHub Pages.
-* [ ] O README contém uma definição de produto.
+* Jayanny Santana: (https://github.com/jay-santana)

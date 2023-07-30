@@ -1,9 +1,9 @@
 import validator from './validator.js';
 
-const buttonOnePag1 = document.querySelector('.btn1')
+// const buttonOnePag1 = document.querySelector('.btn1')
 const informsPag1 = document.querySelector('.container-one')
-const informsPag2 = document.querySelector('.container-two')
-const buttonReturnMenuOne = document.querySelector('.return-menu-one')
+// const informsPag2 = document.querySelector('.container-two')
+// const buttonReturnMenuOne = document.querySelector('.return-menu-one')
 const buttonFivePag1 = document.querySelector('.btn5')
 const informsPag3 = document.querySelector('.container-three')
 const buttonValidation = document.querySelector('.validation')
@@ -22,24 +22,24 @@ const securityCode = document.querySelector('.code')
 
 
 //Funcionalidade dos botões das páginas
-buttonOnePag1.addEventListener('click', informStore)
-buttonReturnMenuOne.addEventListener('click', returnMenuOne)
+// buttonOnePag1.addEventListener('click', informStore)
+// buttonReturnMenuOne.addEventListener('click', returnMenuOne)
 buttonFivePag1.addEventListener('click', idCard)
 buttonValidation.addEventListener('click', emptyNumber)
 buttonReturnMenuTwo.addEventListener('click', returnMenuTwo)
 buttonReturnMenuTwo.addEventListener('click', reset)
 
 //Ir para pág. 2
-function informStore() {
-  informsPag1.classList.add('hide')
-  informsPag2.classList.remove('hide')
-}
+// function informStore() {
+//   informsPag1.classList.add('hide')
+//   // informsPag2.classList.remove('hide')
+// }
 
-//Retornar ao menu a apartir da pág.2
-function returnMenuOne() {
-  informsPag1.classList.remove('hide')
-  informsPag2.classList.add('hide')
-}
+//Retornar ao menu a partir da pág.2
+// function returnMenuOne() {
+//   informsPag1.classList.remove('hide')
+//   // informsPag2.classList.add('hide')
+// }
 
 //Ir para a pág. 3
 function idCard() {
@@ -55,7 +55,7 @@ function emptyNumber(e) {
     alert('Você precisa digitar um número de cartão!')
     e.stopPropagation()
   } else {
-    const number = idNumberCard.replace(/\s/g, '')
+    const number = idNumberCard.replace(/\D/g, '')
     // const maskNumber = validator.maskify(number)
     // idNumberCard = maskNumber
     validator.maskify(number)
@@ -97,7 +97,7 @@ function reset(){
 formOne.inputNumbers.addEventListener('keyup', (e) => {
   const valorInputNumbers = e.target.value;
 
-  const maskValue = valorInputNumbers.replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
+  const maskValue = valorInputNumbers.replace(/\D/g, '').replace(/\s/g, '').replace(/([0-9]{4})/g, '$1 ').trim();
   const maskSpace = maskValue.replace(/\s/g, '')
 
   formOne.inputNumbers.value = maskValue;
