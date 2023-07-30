@@ -50,7 +50,7 @@ Dessa forma, as cores utilizadas foram pensadas levando em consideração a tem�
 
 Protótipo da tela de validação do cartão de crédito:
 <p align="center">
-<img src="img/tela_de_validação_do_cartão.png" alt="tela de validação do cartão de crédito" />
+<img src="tela_de_validacao_do_cartao.png" alt="Tela de validação do cartão de crédito" />
 </p>
 
 ## 5. Interface do projeto e objetivos alcançados
@@ -59,7 +59,7 @@ A interface do projeto foi idealizada para trazer autonomia, praticidade e segur
 
 Demonstração de uso:
 <p align="center">
-<img src="img/projeto_card_validator_js.gif" alt="Demonstração: Card-Validator-JS" />
+<img src="projeto_card_validator_js.gif" alt="Demonstração: Card-Validator-JS" />
 </p>
 
 [✔] Possui uma interface que possibilita inserir o número que desejamos validar.
