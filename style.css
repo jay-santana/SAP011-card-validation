@@ -1,0 +1,430 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+@font-face {
+    font-family:'shine';
+    src: url('fonte/Shine\ Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family:'shine';
+    font-weight: normal;
+    font-style: normal;
+    color: #ffde59;
+    font-size: 70px;
+    text-align: center;
+}
+
+h2 {
+    font-family:'shine';
+    font-weight: normal;
+    font-style: normal;
+    color: #ffde59;
+    font-size: 70px;
+    text-align: center;
+}
+
+h3 {
+    font-family:'shine';
+    font-weight: normal;
+    font-style: normal;
+    color: #cb6ce6;
+    font-size: 42px;
+    text-align: center;
+    margin-top: 32px;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container-one {
+    width: 100%;
+    height: 100vh;
+    padding: 16px;
+
+    background-image: url(img/music_pag1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.informs-container-one {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.container-two {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(img/music_pag3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.inform-container-two {
+    width: 90%;
+    margin-right: 15%;
+}
+
+.container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.id-card {
+    margin-left: 250px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+ }
+
+#form-cred-card {
+    font-family: 'shine';
+    font-weight: normal;
+    width: 32%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+#block-card-id-two {
+    font-family: 'shine';
+    font-weight: normal;
+    width: 32%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.style-number-one {
+    color: #0cc0df;
+    font-size: 24px;
+}
+
+.style-number-two {
+    background-color: #ededed;
+    border: none;
+    height: 40px;
+    width: 350px;
+}
+
+.style-number-two::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px; 
+    color: #c9c7c7;
+    text-align: center;     
+}
+
+.style-name-one {
+    color: #ff66c4;
+    font-size: 24px;
+}
+
+.style-name-two {
+    background-color: #ededed;
+    border: none;
+    height: 40px;
+    width: 350px;
+}
+
+.style-name-two::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: #c9c7c7;
+    text-align: center;  
+}
+
+.style-expiration-one {
+    color: #7ed957;
+    font-size: 24px;
+}
+
+.style-expiration-two {
+    background-color: #ededed;
+    border: none;
+    height: 40px;
+    width: 167.5px;
+}
+
+.style-expiration-two::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: #c9c7c7;
+    text-align: center;
+}
+
+.style-code-one {
+    color: #cb6ce6;
+    font-size: 24px;
+}
+
+.style-code-two {
+    background-color: #ededed;
+    border: none;
+    height: 40px;
+    width: 167.5px;
+  }
+
+.style-code-two::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: #c9c7c7;
+    text-align: center; 
+}
+
+.formt-card {
+    background-image: linear-gradient(to right,#b7e4fd, #ffb9fa);
+    border: #a7b7ff;
+
+    width: 310px;
+    height: 200px;
+    margin-top: 70px;
+   
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);    
+}
+
+.logo-marca{
+    text-align: right;
+    min-height: 50px;
+}
+
+.logo-marca img {
+    height: 100%;
+    object-fit: cover;
+    max-height: 30px;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+
+.chip{
+    width: 100%;
+    max-width: 40px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.id-card-two{
+    width: 100%;
+    height: 40px;
+    color: #fcfcfc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.styleNumberCard{
+    font-size: 18px;
+    display: flex;
+    margin-right: 80px;
+}
+
+.flexbox-card{
+    font-size: 11px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 70px;
+}
+
+.box-card-name{
+    width: 100%;
+}
+.nameCard{
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    margin-right: 180px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+
+.container-three {
+    background-image: url(img/music_pag4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.inform-container-three {
+    margin-left: 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 210px;
+}
+
+.card-validation {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+
+.result-text{
+    width: 40%;
+    font-family: 'shine';
+    font-size: 55px;
+    color: #8b9ff6;
+    text-align: center;
+    margin-right: 930px;
+}
+
+.button-menu-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    list-style: none;
+    gap: 16px;
+}
+
+.button {
+    font-family: 'shine';
+    font-weight: normal;
+    text-align: center;
+    border-radius: 20px;
+    border: 0;
+    height: 40px;
+    width: 250px;
+    padding: 0 32px;
+
+    transition: filter 0.2s;
+}
+
+.button:hover {
+    filter: brightness(0.8);
+}
+
+.btn1 {
+    background-color:#fd9e9e;
+    color: #fff;
+    font-size: 20px;
+    border: #fd9e9e;    
+}
+
+.btn2 {
+    background-color:#ffeeaa;
+    color: #fff;
+    font-size: 20px;
+    border: #ffeeaa;
+}
+
+.btn3 {
+    background-color:#c9ffb2;
+    color: #fff;
+    font-size: 20px;
+    border: #c9ffb2; 
+}
+
+.btn4 {
+    background-color:#a7b7ff;
+    color: #fff;
+    font-size: 20px;
+    border: #a7b7ff;
+}
+
+.btn5 {
+    background-color:#ff9dd9;
+    color: #fff;
+    font-size: 20px;
+    border: #ff9dd9;
+}
+
+.return-menu-one {
+    background-color:#a7b7ff;
+    color: #fff;
+    font-size: 20px;
+    border: #a7b7ff;
+    margin-top: 32px;
+}
+
+.validation {
+    background-image: linear-gradient(to right,#b7e4fd, #ffb9fa);
+    color: #5271ff;
+    font-size: 22px;
+    border-radius: 2%;
+    border: #a7b7ff;
+
+    margin-top: 16px;
+    padding: 0 146px;
+    width: 352px;
+}
+
+.return-menu-two {
+    background-color:#fd9e9e;
+    color: #fff;
+    font-size: 20px;
+    border: #fd9e9e;
+    margin-top: 32px;
+    width: 280px;    
+}
+
+.confirm {
+    background-color:#fd9e9e;
+    color: #fff;
+    font-size: 20px;
+    border: #fd9e9e;
+    margin-top: 32px;
+    width: 280px;
+}
+
+.hide {
+    display: none;
+}
