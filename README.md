@@ -105,4 +105,4 @@ Ideias para melhorias futuras:
 
 ## 9. Desenvolvedora
 
-- *Jayanny Santana*: <a href="https://github.com/jay-santana"> @jay-santana</a>
+* Jayanny Santana: <a href="https://github.com/jay-santana"> @jay-santana</a>

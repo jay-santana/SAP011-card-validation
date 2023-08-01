@@ -1,11 +1,12 @@
 const validator = {
   //Algoritmo de Luhn
   isValid: function(number) { //Passo 1: contar os números do array;
-    const numberDigits = number.split('').reverse().map(Number) //Passo 4: transformar a string em número;
-    // console.log(numberDigits)
+    const numberDigits = number.split('').reverse().map(Number) 
+    //Passo 2: criar um array de uma string; 
+    //Passo 3: transformar a string em número; 
+    //Passo 4: reverter array;
+    
     let sum = 0
-
-    // console.log(numberDigits);
 
     //Passo 5: multiplicar os números pares por 2.
     for (let i = 1; i < numberDigits.length; i = i + 2) {
@@ -22,7 +23,6 @@ const validator = {
     for (let i = 0; i < numberDigits.length; i++) {
       sum = sum + numberDigits[i]
     }
-    // console.log(sum)
 
     //Passo 8: verificar se a soma dos dígitos é multiplo de 10;
     //Passo 9: exibir mensagem de validação.
@@ -37,8 +37,6 @@ const validator = {
   maskify: function(number){
     const maskNumberCard = number.toString()
 
-    // console.log(typeof maskNumberCard)
-
     let accumulator = ''
 
     for(let i = 0; i < maskNumberCard.length; i++) {
@@ -48,7 +46,6 @@ const validator = {
         accumulator = accumulator + maskNumberCard[i]
       }
     }
-    console.log(accumulator)
     return accumulator
   }
 }

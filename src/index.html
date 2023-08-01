@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <!-- <main></main> -->
   <div class="container-one">
     <div class="informs-container-one">
       <span class="title-one">
@@ -17,65 +16,46 @@
         </header>
         <h3>MENU</h3>
       </span>
-      <div class="button-menu-container">
-        <button class="btn1 button" type="button">Quem somos</button>
-        <button class="btn2 button" type="button">Instrumentos musicais</button>
-        <button class="btn3 button" type="button">Brinquedos sonoros</button>
-        <button class="btn4 button" type="button">Livros musicais</button>
-        <button class="btn5 button" type="button">Comprar</button>
-      </div>
+      <ul class="button-menu-container">
+        <li><button class="btn1 button" type="button">Quem somos</button></li>
+        <li><button class="btn2 button" type="button">Instrumentos musicais</button></li>
+        <li><button class="btn3 button" type="button">Brinquedos sonoros</button></li>
+        <li><button class="btn4 button" type="button">Livros musicais</button></li>
+        <li><button class="btn5 button" type="button">Comprar</button></li>
+      </ul>
     </div>
   </div>
 
-  <!-- <div class="container-two hide">
-    <div class="informs-container-two">
-      <span class="title-two">
-        <header>
-          <h2>Vilarejo Musical</h2>
-        </header>
-      </span>
-      <div class="text-box">
-        <p>A música é a linguagem que se traduz em formas sonoras capazes de comunicar pensamentos, sensações e
-          sentimentos através do som e silêncio.</p>
-        <p>Tendo em vista a importância que a música representa para a sociedade. A vilarejo musical, como uma empresa
-          que se preocupa com uma educação musical de qualidade, busca por meio dos nossos produtos proporcionar uma
-          experiência musical de nível profissional para a formação dos nossos pequenos.</p>
-      </div>
-      <div>
-        <button class="return-menu-one button" type="button">Voltar ao menu</button>
-      </div>
-    </div>
-  </div> -->
-
-
-  <div class="container-three hide">
-    <div class="inform-container-three">
-      <header><h2>Validação do cartão de crédito</h2></header>
+  <div class="container-two hide">
+    <div class="inform-container-two">
+      <header>
+        <h2>Validação do cartão de crédito</h2>
+      </header>
     </div>
     <div class="container-card">
-      <div class="id-card-one">
-        <form id="cred-card-one">
+      <div class="id-card">
+        <form id="form-cred-card">
           <div class="input-box">
             <label class="style-number-one" for="inputNumbers">Número do cartão</label>
-            <input class="style-number-two" type="text" id="inputNumbers" nome="inputNumbers"
+            <input class="style-number-two" type="text" id="inputNumbers" name="inputNumbers"
               placeholder="4154 2560 8541 9631" maxlength="19" required>
           </div>
           <div class="input-box">
             <label class="style-name-one" for="inputName">Títular do cartão</label>
-            <input class="style-name-two" type="text" id="inputName" nome="inputName" placeholder="MARIA DA SILVA"
+            <input class="style-name-two" type="text" id="inputName" name="inputName" placeholder="MARIA DA SILVA"
               maxlength="32" required>
           </div>
-        </form>
-
-        <form id="cred-card-two">
-          <div class="input-expiration">
-            <label class="style-expiration-one" for="inputExpiration">Validade</label>
-            <input class="style-expiration-two" type="text" id="inputExpiration" nome="inputExpiration" placeholder="06/25"
-              maxlength="5" required>
-          </div>
-          <div class="input-security-code">
-            <label class="style-code-one" for="inputCodeCard">CVV</label>
-            <input class="style-code-two" type="text" id="inputCodeCard" nome="inputCodeCard" placeholder="123" maxlength="3" required>
+          <div id="block-card-id-two">
+            <div class="input-expiration">
+              <label class="style-expiration-one" for="inputExpiration">Validade</label>
+              <input class="style-expiration-two" type="text" id="inputExpiration" name="inputExpiration"
+                placeholder="06/25" maxlength="5" required>
+            </div>
+            <div class="input-security-code">
+              <label class="style-code-one" for="inputCodeCard">CVV</label>
+              <input class="style-code-two" type="text" id="inputCodeCard" name="inputCodeCard" placeholder="123"
+                maxlength="3" required>
+            </div>
           </div>
         </form>
         <div class="text-result">
@@ -88,38 +68,38 @@
           <img src="img/contactless.png" alt="">
         </div>
         <img src="img/chip.png" class="chip" alt="">
-        <div class="id-card-two">
-          <div class="styleNumberCard">4154 2560 8541 9631</div>
+        <ul class="id-card-two">
+          <li class="styleNumberCard">4154 2560 8541 9631</li>
           <div class="flexbox-card">
-            <div class="box-card">
+            <li class="box-card">
               <span>Validade</span>
               <div class="expiration">
                 <span class="expDate">06/25</span>
               </div>
-            </div>
-            <div class="box-card">
+            </li>
+            <li class="box-card">
               <span>CVV</span>
               <div class="security"></div>
               <span class="code">123</span>
-            </div>
+            </li>
           </div>
-          <div class="box-card-name">
+          <li class="box-card-name">
             <span class="nameCard">MARIA DA SILVA</span>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 
-  <div class="container-for hide">
-    <div class="inform-container-for">
-      <div class="result-text"></div>
+  <section class="container-three hide">
+    <div class="inform-container-three">
+      <p class="result-text"></p>
       <div class="card-validation">
         <button class="return-menu-two button" type="button">Voltar ao menu</button>
         <button class="confirm button" type="button">Confirmar compra</button>
       </div>
     </div>
-  </div>
+  </section>
 
   <script src="index.js" async type="module"></script>
   <footer></footer>
